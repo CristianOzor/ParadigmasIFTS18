@@ -10,14 +10,30 @@ def menu():
         if opcion == "3":
             exit()
         if opcion == "1":
-            eje7_guardar(ARCHIVO, CAMPOS)
+            guatdar_datos(empleados, fechas)
         if opcion == "2":
-            eje7_cargar(ARCHIVO)
+            cargar_datos(empleados)
         else:
             print("Por favor elija una opcion valida")
 
-def guardar_datos(empleados, fechas)
-	pass
+def guardar_datos(empleados, fechas):
+	
+	empleado_F = open(empleados)
+    fechas_F = open(fechas)
+    empleados_csv = csv.reader(empleado_F)
+    dias_csv = csv.reader(fechas_F)
+    
+    #Salteo los encabezados de los archivos
+    next(empleados_csv)
+    next(dias_csv)
+    
+    # Empieza a leer
+	empleado = next(empleados_csv, None)
+	dias = next(dias_csv, None)
+	
+	print(empleado)
 
-def cargar_datos()
-	pass
+guardar_datos("empleados.csv", "dias.csv")
+    
+		
+	
