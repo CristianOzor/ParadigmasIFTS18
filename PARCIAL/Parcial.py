@@ -2,7 +2,7 @@ import csv
 import os.path
 
 def menu():
-    #Ciclo que itera hasta que 
+    
     while True:
         print("Elija una opcion: \n 1.Guardar datos \n 2.Cargar datos \n 3.Salir")
         opcion = input("")
@@ -31,7 +31,15 @@ def guardar_datos(empleados, fechas):
 	empleado = next(empleados_csv, None)
 	dias = next(dias_csv, None)
 	
-	print(empleado)
+	While(empleado):
+		
+		
+	# Cierro los archivos
+    empleado_F.close()
+    fechas_F.close()
+		
+def cargar_datos(archivo):
+	pass
 
 guardar_datos("empleados.csv", "dias.csv")
     
